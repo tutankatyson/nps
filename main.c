@@ -15,6 +15,7 @@
 int dealer0(int n, my_stack *a, my_stack *b);
 void pasa_media(my_stack *a, my_stack *b);
 void ps_best_way(my_stack *a, my_stack *b);
+void probando(my_stack *a, my_stack *b);
 
 #define A 10
 #define B 15
@@ -51,11 +52,11 @@ int main(int argc, char **argv)
 
 
 
-	ps_best_way(&a, &b);
+//	ps_best_way(&a, &b);
 
 
 
-
+	probando(&a, &b);
 
 
 
@@ -612,7 +613,7 @@ void pasa_media(my_stack *a, my_stack *b)
 
 
 
-
+//10->30  ;  100->600  ;  500->5000-5400  ;  1000->13.000-14.000
 void ps_best_way(my_stack *a, my_stack *b)
 {
 	ft_pushn(b, a, a->size - 3);
@@ -623,33 +624,32 @@ void ps_best_way(my_stack *a, my_stack *b)
 
 
 
+// 100-> 600 ; 500->4.500 1.000->11.000
 
+void probando(my_stack *a, my_stack *b)
+{
 
-
-
-
-/*			PS rara
 
 //	status(&b);
-	printf("\npush 3\n");
+//													printf("\npush 3\n");
 //	ft_pushn(&b, &a, 3);
 
-	printf("\nord 3\n");
+//													printf("\nord 3\n");
 //	ft_ord3(&b);
-	pasa_media(&a,&b);
+
+	pasa_media(a,b);
 //	b.max = ft_max(&b);
 //	b.min = ft_min(&b);
 
-	printf("\ninsert 50%%\n");
-	ft_insert_n_best(&b,&a,(25 * a.size / 100));
+//													printf("\ninsert 50%%\n");
+	ft_insert_n_best(b,a,(25 * a->size / 100));
 
 	printf("\npush 80%%\n");
-	ft_pushn(&b, &a, a.size);
+	ft_pushn(b, a, a->size);
 
-	ft_pushn(&a, &b, 3);
-	ft_ord3(&a);
-	ft_insert_best(&a,&b);
+	ft_pushn(a, b, 3);
+	ft_ord3(a);
+	ft_insert_best(a,b);
 
-	ft_center(&a);
-
-*/
+	ft_center(a);
+}
