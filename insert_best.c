@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:43:56 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 17:17:52 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:15:35 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,17 @@ void	ft_insert_best(my_stack *from, my_stack *to)
 		i = 0;
 		while (i <= to->last)
 		{
-			if (ft_calculator(to, i, from, ft_findpos(to->stack[i], from)) < calc)
+			if (ft_calculator(to, i, from,
+					ft_findpos(to->stack[i], from)) < calc)
 			{
 				candidato = i;
-				calc = ft_calculator(to, i, from, ft_findpos(to->stack[i], from));
+				calc = ft_calculator(to, i, from,
+						ft_findpos(to->stack[i], from));
 			}
 			i++;
 		}
-		ft_inserton(to, candidato, from, ft_findpos(to->stack[candidato], from));
+		ft_inserton(to, candidato, from,
+			ft_findpos(to->stack[candidato], from));
 	}
 }
 

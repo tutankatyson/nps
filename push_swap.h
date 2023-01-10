@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 21:13:40 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 17:30:42 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:25:42 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ void	ft_insert_best(my_stack *a, my_stack *b);
 void	ft_insert_n_best(my_stack *a, my_stack *b, int n);		
 
 void	ft_center(my_stack *st);
+void	ft_push_disorder(my_stack *to, my_stack *from, int n);
 
 #endif
 

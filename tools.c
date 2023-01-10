@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 21:11:33 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 17:38:44 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:32:32 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -500,6 +500,7 @@ int push(my_stack *to, my_stack *from)
 	while (i <= to->last)
 	{
 		to->stack[to->last - i+1] = to->stack[to->last - i];
+		to->order[to->last - i+1] = to->order[to->last - i];
 		i++;
 	}
 	to->stack[0] = from->stack[0];
@@ -508,6 +509,7 @@ int push(my_stack *to, my_stack *from)
 	while (i < from->last)
 	{
 		from->stack[i] = from->stack[i+1];
+		from->order[i] = from->order[i+1];
 		i++;
 	}
 	from->last--;

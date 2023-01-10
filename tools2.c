@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:36:22 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 17:35:20 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:11:47 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,29 @@ void	ft_center(my_stack *st)
 	{
 		while (st->stack[0] != min)
 			reverse(st);
+	}
+}
+
+void	ft_push_disorder(my_stack *to, my_stack *from, int n)
+{
+	int	i;
+	int	cont;
+	int	last;
+
+	i = 0;
+	cont = 1;
+	last = ft_find_min(from);
+	while (i < n)
+	{
+//		printf("\nf.order:%i ; f.size:%i\n", from->order[0], cont * 10 * from->size / 100);
+		if (from->order[0] >= from->order[last] && from->order[0] <= from->order[last] * 2)
+		{
+			cont++;
+			last = from->stack[0];
+			rotate(from);
+		}
+		else
+			push(to, from);
+		i++;
 	}
 }
