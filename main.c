@@ -14,7 +14,7 @@
 
 int dealer0(int n, my_stack *a, my_stack *b);
 void pasa_media(my_stack *a, my_stack *b);
-
+void ps_best_way(my_stack *a, my_stack *b);
 
 #define A 10
 #define B 15
@@ -39,75 +39,37 @@ int main(int argc, char **argv)
 	ft_init(&a, argc, argv);
 	ft_init(&b, argc, NULL);
 
-//	dispersion(&a);
-//	rotoswap(&a,500);
-//	dispersion(&a);
+//	status(&b);
 
 //	pasa_media(&a,&b);
-
-//	rollup_b_pushall_3(&a,&b);					//(20)90 (100)1300 (1.000) 120.000
-
-	algo_de_ritmo(&a,&b);
-
-/*
-	ft_insert(&a,10,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-	ft_insert(&a,0,&b);
-*/
-
-
+//	ft_insert_best(&a,&b);
 //	ft_inserton(&a,A,&b,B);
+//	dealer(500,&a,&b);
+
+//	ft_push_disorder(&b, &a, a.size);
 
 
 
 
-//	dealer0(50,&a,&b);		//82
-//	dealer(500,&a,&b);		//87
+	ps_best_way(&a, &b);
 
 
 
 
 
+
+
+
+
+
+
+//10->30  ;  100->600  ;  500->5000-5400  ;  1000->13.000-14.000  10,000
 
 //	rollup_b_pushall(&a,&b);					//(100)1500
 //	rollup_b_pushall_2(&a,&b);					//(100)1500
-
+//	rollup_b_pushall_3(&a,&b);					//(20)90 (100)1300 (1.000) 120.000
 //	PUSH_SWAP(&a,&b);							//(100) 8591
 
-
-
-
-
-
-
-//	push(&b,&a);
-//	print(&a,&b);
-//	print(&a1,&b1);
-//	printf(GREEN"ORDER"RESET);
-//	print(&a,&b);
-//	
-//	one_stack(&a2);
-//	print(&a,&b);
-//	print(&a1,&b1);
-//	print(&a1,&b1);
 //	checkp(&a);
 	return 0;
 }
@@ -646,3 +608,48 @@ void pasa_media(my_stack *a, my_stack *b)
 	}
 }
 
+
+
+
+
+
+void ps_best_way(my_stack *a, my_stack *b)
+{
+	ft_pushn(b, a, a->size - 3);
+	ft_ord3(a);
+	ft_insert_best(a, b);
+	ft_center(a);
+}
+
+
+
+
+
+
+
+
+/*			PS rara
+
+//	status(&b);
+	printf("\npush 3\n");
+//	ft_pushn(&b, &a, 3);
+
+	printf("\nord 3\n");
+//	ft_ord3(&b);
+	pasa_media(&a,&b);
+//	b.max = ft_max(&b);
+//	b.min = ft_min(&b);
+
+	printf("\ninsert 50%%\n");
+	ft_insert_n_best(&b,&a,(25 * a.size / 100));
+
+	printf("\npush 80%%\n");
+	ft_pushn(&b, &a, a.size);
+
+	ft_pushn(&a, &b, 3);
+	ft_ord3(&a);
+	ft_insert_best(&a,&b);
+
+	ft_center(&a);
+
+*/
