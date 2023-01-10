@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 21:13:40 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/08 23:23:51 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:30:42 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ typedef struct mi_stack
 
 	int 	max;
 	int 	min;
-	int 	dispersión;
-
+	int		dispersión;
 }					my_stack;
 
 
@@ -70,6 +69,10 @@ int check(my_stack *st);
 int abs(int num);
 void dispersion(my_stack *st);
 int ft_mayor(int a, int b);
+
+void	ft_pushn(my_stack *to, my_stack *from, int n);
+void	ft_ord3(my_stack *st);
+
 
 /********MONITOR*******/
 
@@ -106,14 +109,17 @@ int PUSH_SWAP(my_stack *a, my_stack *b);
 
 int ft_insert(my_stack *from, int position, my_stack *to);
 int ft_insertin(my_stack *from, int position, my_stack *to);
-int ft_inserton(my_stack *from, int fromi, my_stack *to, int toi);
+void ft_inserton(my_stack *from, int fromi, my_stack *to, int toi);
 int ft_menor(int a, int b);
 int ft_menor3(int a, int b, int c);
 int ft_findpos(int num, my_stack *st);
 
+//10->30  ;  100->600  ;  500->5000-5400  ;  1000->13.000-14.000
 
-void algo_de_ritmo(my_stack *a, my_stack *b);
+void	ft_insert_best(my_stack *a, my_stack *b);			
+void	ft_insert_n_best(my_stack *a, my_stack *b, int n);		
 
+void	ft_center(my_stack *st);
 
 #endif
 

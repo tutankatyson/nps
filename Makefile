@@ -3,11 +3,11 @@
 
 NAME = push_swap
 
-SRC = main.c tools.c
+SRC = main.c tools.c tools2.c findposition.c inserton.c insert_best.c
 
 SRC_TEST = maintester.c
 
-OBJ = main.o tools.o
+OBJ = main.o tools.o tools2.o findposition.o inserton.o insert_best.o
 
 LIB = ./lib/libftprintf.a
 
@@ -100,6 +100,9 @@ pr:
 pelea:
 	./push_swap $(FIGTH_TEST) |./checker_Mac $(FIGTH_TEST)
 
+py5: fclean $(NAME)
+	python3 python_visualizer.py `ruby -e "puts (1..5).to_a.shuffle.join(' ')"`
+
 py10: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (1..10).to_a.shuffle.join(' ')"`
 
@@ -107,10 +110,13 @@ py20: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (1..20).to_a.shuffle.join(' ')"`
 
 py100: fclean $(NAME)
-	python3 python_visualizer.py `ruby -e "puts (-49..50).to_a.shuffle.join(' ')"`
+	python3 python_visualizer.py `ruby -e "puts (-48..50).to_a.shuffle.join(' ')"`
 
 py100+: fclean $(NAME)
-	python3 python_visualizer.py `ruby -e "puts (0..100).to_a.shuffle.join(' ')"`
+	python3 python_visualizer.py `ruby -e "puts (1..100).to_a.shuffle.join(' ')"`
+
+py200: fclean $(NAME)
+	python3 python_visualizer.py `ruby -e "puts (-99..100).to_a.shuffle.join(' ')"`
 
 py500: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (-249..250).to_a.shuffle.join(' ')"`

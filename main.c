@@ -46,8 +46,32 @@ int main(int argc, char **argv)
 //	pasa_media(&a,&b);
 
 //	rollup_b_pushall_3(&a,&b);					//(20)90 (100)1300 (1.000) 120.000
+//	ft_insert_best(&a,&b);
 
-	algo_de_ritmo(&a,&b);
+
+//10->30  ;  100->600  ;  500->5000-5400  ;  1000->13.000-14.000  10,000
+
+	status(&b);
+	printf("\npush 3\n");
+//	ft_pushn(&b, &a, 3);
+
+	printf("\nord 3\n");
+//	ft_ord3(&b);
+	pasa_media(&a,&b);
+//	b.max = ft_max(&b);
+//	b.min = ft_min(&b);
+
+	printf("\ninsert 50%%\n");
+	ft_insert_n_best(&b,&a,(25 * a.size / 100));
+
+	printf("\npush 80%%\n");
+	ft_pushn(&b, &a, a.size);
+
+	ft_pushn(&a, &b, 3);
+	ft_ord3(&a);
+	ft_insert_best(&a,&b);
+
+	ft_center(&a);
 
 /*
 	ft_insert(&a,10,&b);
