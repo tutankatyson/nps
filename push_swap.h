@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 21:13:40 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/05 13:16:58 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/08 23:23:51 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_isrevorder(my_stack *st);
 int check(my_stack *st);
 int abs(int num);
 void dispersion(my_stack *st);
-
+int ft_mayor(int a, int b);
 
 /********MONITOR*******/
 

@@ -104,7 +104,7 @@ py10: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (1..10).to_a.shuffle.join(' ')"`
 
 py20: fclean $(NAME)
-	python3 python_visualizer.py `ruby -e "puts (-9..10).to_a.shuffle.join(' ')"`
+	python3 python_visualizer.py `ruby -e "puts (1..20).to_a.shuffle.join(' ')"`
 
 py100: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (-49..50).to_a.shuffle.join(' ')"`
@@ -122,4 +122,4 @@ py1000: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (-499..500).to_a.shuffle.join(' ')"`
 
 py10000: fclean $(NAME)
-	python3 python_visualizer.py `ruby -e "puts (-4999..5000).to_a.shuffle.join(' ')"`
+	python3 python_visualizer.py `ruby -e "puts (0..3000).to_a.shuffle.join(' ')"`
