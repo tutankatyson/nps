@@ -16,6 +16,7 @@ int dealer0(int n, my_stack *a, my_stack *b);
 void pasa_media(my_stack *a, my_stack *b);
 void ps_best_way(my_stack *a, my_stack *b);
 void probando(my_stack *a, my_stack *b);
+void probando0(my_stack *a, my_stack *b);
 
 #define A 10
 #define B 15
@@ -623,10 +624,26 @@ void ps_best_way(my_stack *a, my_stack *b)
 }
 
 
-
-// 100-> 600 ; 500->4.500 1.000->11.000
+//5->10 10->25 100-> 550 ; 500->5.000 1.000->11.000
 
 void probando(my_stack *a, my_stack *b)
+{
+//	status(&b);
+	ft_push_disorder(b, a, a->size);
+	/*
+	
+		WARNING: hay que garantizar que el stack a estéordenado antes 
+	
+	
+	
+	*/
+//	ft_insert_best(a,b);
+//	ft_center(a);
+}
+
+
+// 10->35 100-> 600 ; 500->4.500 1.000->11.000
+void probando0(my_stack *a, my_stack *b)
 {
 
 
@@ -644,7 +661,7 @@ void probando(my_stack *a, my_stack *b)
 //													printf("\ninsert 50%%\n");
 	ft_insert_n_best(b,a,(25 * a->size / 100));
 
-	printf("\npush 80%%\n");
+//	printf("\npush 80%%\n");
 	ft_pushn(b, a, a->size);
 
 	ft_pushn(a, b, 3);

@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:03:44 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 18:02:27 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/10 23:35:50 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_findpos(int num, my_stack *st)
 			return (position);
 		i++;
 	}
-	printf("\nERROR (find_position)\n");
+//	printf("\nERROR (find_position)\n");
 	return (-1);
 }
 

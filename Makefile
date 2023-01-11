@@ -103,6 +103,9 @@ pelea:
 py5: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (1..5).to_a.shuffle.join(' ')"`
 
+py7: fclean $(NAME)
+	python3 python_visualizer.py `ruby -e "puts (1..7).to_a.shuffle.join(' ')"`
+
 py10: fclean $(NAME)
 	python3 python_visualizer.py `ruby -e "puts (1..10).to_a.shuffle.join(' ')"`
 

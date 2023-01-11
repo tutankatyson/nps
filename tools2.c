@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:36:22 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 20:11:47 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/11 00:47:36 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,31 @@ void	ft_center(my_stack *st)
 
 	min = ft_min(st);
 	if (ft_find_min(st) < st->size / 2)
-	{
 		while (st->stack[0] != min)
 			rotate(st);
-	}
 	else
-	{
 		while (st->stack[0] != min)
 			reverse(st);
-	}
 }
+
+int	ft_small_stack(my_stack	*a)
+{
+	if (check(a))
+		return (0);
+	if (a->size == 2)
+	{
+		swap(a);
+		return (0);
+	}
+	if (a->size == 3)
+	{
+		ft_ord3(a);
+		return (0);
+	}
+	return (1);
+}
+
+
 
 void	ft_push_disorder(my_stack *to, my_stack *from, int n)
 {
@@ -68,18 +83,21 @@ void	ft_push_disorder(my_stack *to, my_stack *from, int n)
 
 	i = 0;
 	cont = 1;
-	last = ft_find_min(from);
+	last = ft_min(from);
 	while (i < n)
 	{
-//		printf("\nf.order:%i ; f.size:%i\n", from->order[0], cont * 10 * from->size / 100);
-		if (from->order[0] >= from->order[last] && from->order[0] <= from->order[last] * 2)
+//		printf("\nf.order:%i ; f.last:%i\n", from->order[0], from->order[last]);
+		if (from->stack[0] >= last)
 		{
 			cont++;
 			last = from->stack[0];
 			rotate(from);
+
 		}
 		else
+		{
 			push(to, from);
+		}
 		i++;
 	}
 }
