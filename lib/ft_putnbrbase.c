@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbrbase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:40:59 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/12/03 13:10:44 by marvin           ###   ########.fr       */
+/*   Updated: 2023/01/11 22:44:51 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,19 @@ static void	ft_do_all(long int n, char *base)
 
 int	ft_putnbrbase(long int n, char *base)
 {
-	int cont;
-	int div;
+	int	cont;
+	int	div;
 
 	cont = 0;
 	if (ft_check_args(n, base) == 1)
 		ft_do_all(n, base);
 	if (ft_check_args(n, base) == 2)
 		write(1, base, 1);
-	
 	div = ft_strlen(base);
 	while (n / div > 0)
 	{
 		cont++;
 		n = n / div;
 	}
-	return (cont-1);
+	return (cont - 1);
 }

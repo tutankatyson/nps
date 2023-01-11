@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inserton.c                                         :+:      :+:    :+:   */
+/*   3_inserton.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:36:27 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 16:35:05 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/11 15:53:14 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@
 
 #include "push_swap.h"
 
-static void	ft_rr(my_stack *from, int fromi, my_stack *to, int toi);
-static void	ft_rrr(my_stack *from, int fromi, my_stack *to, int toi);
-static void	ft_simple(my_stack *from, int fromi, my_stack *to, int toi);
+static void	ft_rr(t_stack *from, int fromi, t_stack *to, int toi);
+static void	ft_rrr(t_stack *from, int fromi, t_stack *to, int toi);
+static void	ft_simple(t_stack *from, int fromi, t_stack *to, int toi);
 
-void	ft_inserton(my_stack *from, int fromi, my_stack *to, int toi)
+void	ft_inserton(t_stack *from, int fromi, t_stack *to, int toi)
 {
 	int	cr;
 	int	crr;
@@ -61,7 +61,7 @@ void	ft_inserton(my_stack *from, int fromi, my_stack *to, int toi)
 	}
 }
 
-static void	ft_rr(my_stack *from, int fromi, my_stack *to, int toi)
+static void	ft_rr(t_stack *from, int fromi, t_stack *to, int toi)
 {
 	int	i;
 
@@ -85,7 +85,7 @@ static void	ft_rr(my_stack *from, int fromi, my_stack *to, int toi)
 	}
 }
 
-static void	ft_rrr(my_stack *from, int fromi, my_stack *to, int toi)
+static void	ft_rrr(t_stack *from, int fromi, t_stack *to, int toi)
 {
 	int	i;
 
@@ -109,7 +109,7 @@ static void	ft_rrr(my_stack *from, int fromi, my_stack *to, int toi)
 	}
 }
 
-static void	ft_simple(my_stack *from, int fromi, my_stack *to, int toi)
+static void	ft_simple(t_stack *from, int fromi, t_stack *to, int toi)
 {
 	int	i;
 

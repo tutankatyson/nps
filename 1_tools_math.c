@@ -1,22 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   1_tools_math.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 22:52:51 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/11 20:11:30 by jorsanch         ###   ########.fr       */
+/*   Created: 2023/01/11 15:34:58 by jorsanch          #+#    #+#             */
+/*   Updated: 2023/01/11 15:35:38 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_putendl_fd(char *s, int fd)
+/** * * * * * * M A T H * * * * * * **/
+
+int	abs(int num)
 {
-	char	eol;
+	if (num < 0)
+		return (-num);
+	return (num);
+}
 
-	eol = '\n';
-	write(fd, s, ft_strlen(s));
-	write(fd, &eol, 1);
+int	ft_menor(int a, int b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+int	ft_mayor(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+int	ft_menor3(int a, int b, int c)
+{
+	if (a <= b && a <= c)
+		return (a);
+	if (b <= a && b <= c)
+		return (b);
+	return (c);
 }

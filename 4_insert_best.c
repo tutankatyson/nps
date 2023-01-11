@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insert_best.c                                      :+:      :+:    :+:   */
+/*   4_insert_best.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:43:56 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 19:15:35 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/11 15:53:22 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ft_calculator(my_stack *from, int fromi, my_stack *to, int toi);
+static int	ft_calculator(t_stack *from, int fromi, t_stack *to, int toi);
 
-void	ft_insert_best(my_stack *from, my_stack *to)
+void	ft_insert_best(t_stack *from, t_stack *to)
 {
 	int	candidato;
 	int	calc;
@@ -41,7 +41,7 @@ void	ft_insert_best(my_stack *from, my_stack *to)
 	}
 }
 
-static int	ft_calculator(my_stack *from, int fromi, my_stack *to, int toi)
+static int	ft_calculator(t_stack *from, int fromi, t_stack *to, int toi)
 {
 	int	rra;
 	int	rrb;
@@ -57,7 +57,7 @@ static int	ft_calculator(my_stack *from, int fromi, my_stack *to, int toi)
 	return (ft_menor3(cr, crr, simple) + 1);
 }
 
-void	ft_insert_n_best(my_stack *a, my_stack *b, int n)
+void	ft_insert_n_best(t_stack *a, t_stack *b, int n)
 {
 	int	candidato;
 	int	calc;

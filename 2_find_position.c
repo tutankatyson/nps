@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   findposition.c                                     :+:      :+:    :+:   */
+/*   2_find_position.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:03:44 by jorsanch          #+#    #+#             */
-/*   Updated: 2023/01/10 23:35:50 by jorsanch         ###   ########.fr       */
+/*   Updated: 2023/01/11 22:02:29 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,13 @@
 
 #include "push_swap.h"
 
-static int	ft_find_extreme_posistion(int num, my_stack *st);
+static int	ft_find_extreme_posistion(int num, t_stack *st);
 
-int	ft_findpos(int num, my_stack *st)
+int	ft_findpos(int num, t_stack *st)
 {
 	int	position;
 	int	i;
 
-//	printf("\nnum:%i ; st:%c\n",num,st->ch);
-//	status(st);
 	position = 0;
 	if (num < st->min || num > st->max)
 		return (ft_find_extreme_posistion(num, st));
@@ -46,11 +44,10 @@ int	ft_findpos(int num, my_stack *st)
 			return (position);
 		i++;
 	}
-//	printf("\nERROR (find_position)\n");
 	return (-1);
 }
 
-static int	ft_find_extreme_posistion(int num, my_stack *st)
+static int	ft_find_extreme_posistion(int num, t_stack *st)
 {
 	int	position;
 
